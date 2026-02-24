@@ -1,0 +1,10 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Compilados Java
+*.class
