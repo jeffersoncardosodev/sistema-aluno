@@ -59,8 +59,6 @@ public class Main {
         System.out.println("Aluno cadastrado com sucesso!");
     }
 
-    // Guardar esse aluno em variavel global se quiser usar depois
-
 
     public static void mostrarAluno(){
         if (ultimoAluno != null){
