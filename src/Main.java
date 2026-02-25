@@ -26,19 +26,24 @@ public class Main {
                     break;
 
                 case 3:
+                    buscarAluno();
+                    break;
+
+                case 4:
                     System.out.println("Saindo do sistema...");
                     break;
                 default:
                     System.out.println("Opcao invalida!!");
             }
 
-        }while (opcao != 3) ;
+        }while (opcao != 4) ;
     }
     public static void mostrarMenu(){
         System.out.println("\n===== Menu =====");
         System.out.println("1 - Cadastrar Aluno");
         System.out.println("2 - Mostrar Aluno");
-        System.out.println("3 - Sair");
+        System.out.println("3 - Buscar aluno pelo nome");
+        System.out.println("4 - Sair");
         System.out.println("Escolha: ");
     }
 
@@ -71,6 +76,31 @@ public class Main {
 
         for (Aluno aluno : alunos) {
             aluno.mostrarSituacao();
+        }
+    }
+
+    public static void buscarAluno(){
+        if (alunos.isEmpty()) {
+            System.out.println("Nenhum aluno cadastrado!");
+            return;
+        }
+
+        System.out.println("Digite o nome do aluno para busca: ");
+        String nomeBusca = scanner.nextLine();
+
+        boolean encontrado = false;
+
+        for (Aluno aluno : alunos) {
+
+            if (aluno.nome.equalsIgnoreCase(nomeBusca)) {
+                aluno.mostrarSituacao();
+                encontrado = true;
+                break;
+            }
+        }
+
+        if(!encontrado) {
+            System.out.println("Aluno nao encontrado!");
         }
     }
 
