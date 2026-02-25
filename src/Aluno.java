@@ -16,11 +16,11 @@ public class Aluno {
         System.out.println("Media: " + media);
 
         if (media >= 7){
-            System.out.println("Situacao: Aprovado");
+            System.out.println("Situacao: Aprovado!");
         } else if (media >= 5) {
-            System.out.println("Situacao: Recuperacao");
+            System.out.println("Situacao: Recuperacao!");
         }else{
-            System.out.println("Situacao: Reprovado");
+            System.out.println("Situacao: Reprovado!");
         }
     }
 }

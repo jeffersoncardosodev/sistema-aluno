@@ -1,8 +1,10 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
-    static Aluno ultimoAluno;
+    static ArrayList<Aluno> alunos = new ArrayList<>();
+
     public static void main(String[] args) {
 
         int opcao;
@@ -54,17 +56,21 @@ public class Main {
 
         double media = (nota1 + nota2) / 2;
 
-        // Criar objeto Aluno
-        ultimoAluno  = new Aluno(nome, media);
-        System.out.println("Aluno cadastrado com sucesso!");
+        Aluno aluno = new Aluno(nome, media);
+        alunos.add(aluno);
+        System.out.println("Aluno cadastrado com sucesso!!");
     }
 
 
     public static void mostrarAluno(){
-        if (ultimoAluno != null){
-            ultimoAluno.mostrarSituacao();
-        } else {
-            System.out.println("Nenhum aluno cadastrado ainda!!");
+
+        if (alunos.isEmpty()){
+            System.out.println("Nenhum aluno cadastrado.");
+            return;
+        }
+
+        for (Aluno aluno : alunos) {
+            aluno.mostrarSituacao();
         }
     }
 
