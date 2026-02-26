@@ -43,6 +43,6 @@ Demonstrar:
 - Evolução para mini-sistema fullstack
 - Estudo de backend com **Spring Boot**
 
----
 
-Feito por **Jefferson Cardoso** | Transição de carreira para Desenvolvedor de Software | Foco em Java e POO
+
+
